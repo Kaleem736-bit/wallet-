@@ -1,0 +1,28 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f2f2f2;
+  direction: rtl;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input, button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+#wallet-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#tabs button {
+  width: 23%;
+  margin: 1%;
+}
