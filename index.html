@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>محفظتي الإلكترونية</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="auth-section">
+    <h2>تسجيل الدخول أو إنشاء حساب</h2>
+    <form id="register-form">
+      <input type="text" placeholder="الاسم الرباعي" id="fullName" required />
+      <input type="email" placeholder="البريد الإلكتروني" id="email" />
+      <input type="tel" placeholder="رقم الهاتف" id="phone" />
+      <input type="password" placeholder="كلمة المرور" id="password" required />
+      <input type="password" placeholder="تأكيد كلمة المرور" id="confirmPassword" required />
+      <button type="submit">تسجيل</button>
+    </form>
+
+    <form id="login-form">
+      <input type="text" placeholder="البريد الإلكتروني أو رقم الهاتف" id="loginId" required />
+      <input type="password" placeholder="كلمة المرور" id="loginPassword" required />
+      <button type="submit">دخول</button>
+    </form>
+
+    <p id="auth-message"></p>
+  </div>
+
+  <div id="wallet-section" style="display: none;">
+    <h2>مرحباً <span id="userName"></span></h2>
+    <p>العنوان: <span id="walletAddress"></span></p>
+    <p>الرابط: <span id="walletLink"></span></p>
+    <p>الرصيد: <span id="balanceUSD">0</span> USD | <span id="balanceTRX">0</span> TRX</p>
+
+    <div id="assets">
+      <h3>الأصول:</h3>
+      <p>TRX: <span id="assetTRX">0</span></p>
+      <p>USDT: <span id="assetUSDT">0</span></p>
+      <p>USDD: <span id="assetUSDD">0</span></p>
+    </div>
+
+    <div id="actions">
+      <button onclick="showSend()">Send</button>
+      <button onclick="showReceive()">Receive</button>
+      <button>Vote</button>
+      <button>Stake</button>
+    </div>
+
+    <div id="energy">
+      <p>الطاقة (Energy): 1000</p>
+      <p>النطاق (Bandwidth): 500</p>
+    </div>
+
+    <div id="tabs">
+      <button>Assets</button>
+      <button>Markets</button>
+      <button>Discover</button>
+      <button>Me</button>
+    </div>
+
+    <div id="send-section" style="display: none;">
+      <h3>إرسال إلى محفظة</h3>
+      <input type="text" id="sendTo" placeholder="عنوان المحفظة" />
+      <input type="number" id="sendAmount" placeholder="المبلغ (USDT)" />
+      <button onclick="sendFunds()">إرسال</button>
+      <p id="send-msg"></p>
+    </div>
+
+    <div id="history">
+      <h3>سجل التحويلات:</h3>
+      <ul id="transferHistory"></ul>
+      <h3>سجل الاستقبال:</h3>
+      <ul id="receiveHistory"></ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+        </html>
